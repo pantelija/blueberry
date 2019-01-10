@@ -15,7 +15,7 @@
           letter-spacing: 1px;
       	}
       	h1 {
-      		line-height:1.2;
+      	  margin-top: 200px;
           font-weight: 400;
           font-size: 6rem;
           font-family: Georgia, serif;
@@ -34,6 +34,17 @@
         .contact p a:hover {
           color: #905cdc;
         }
+		
+		.vreme {
+		display: flex;
+		width: 750px;
+		justify-content: space-between;
+		}
+		
+		.time {
+			font-size: 16px;
+			line-height: 20px;
+		}
 
         @media (min-width: 550px) and (max-width: 849px)  {
 
@@ -42,13 +53,18 @@
           }
 
           h1 {
-            font-size: 3rem;
-            margin-top: 150px;
+            font-size: 4rem;
+            margin-top: 120px;
           }
 
           .contact p {
             margin-top: 120px;
           }
+		  
+		  .vreme {
+		width: 100%;
+		justify-content: space-around;
+		}
         }
 
         @media (max-width:549px) {
@@ -64,17 +80,73 @@
             font:16px/24px sans-serif;
           }
           .contact p {
-            margin-top: 50px;
+            margin-top: 100px;
           }
+		  
+		 .vreme {
+			width: 100%;
+			justify-content: space-around;
+		}
         }
+		
+		@media (max-width:500px) {
+		
+		.time {
+			font-size: 14px;
+		}
+		}
+		
       </style>
   </head>
-  <body>
+  <body onload="startTime()">
+  
+	<div class="vreme">
+		   <div class="time">
+		   Seattle <div id="seattle"></div>
+		   </div>
+		   <div class="time">
+		   New York <div id="nyc"></div>
+		   </div>
+		   <div class="time">
+		   London <div id="london"></div>
+		   </div>
+		   <div class="time">
+		   Belgrade <div id="local"></div>
+		   </div>
+	</div>   
+		   
+	
+  
     <h1>Blueberry Digital</h1>
+	
+		 	
     <p>Fearless team <br>
       creating <span>remarkable</span> things.</p>
       <div class="contact">
         <p><a href="https://m.me/BlueberryDigitalRS/">get in touch</a></p>
       </div>
+
+	   <script>
+		function startTime() {
+		  var today = new Date();
+		  var h = today.getHours();
+		  var m = today.getMinutes();
+		  m = checkTime(m);
+		  document.getElementById("local").innerHTML =
+		  h + ":" + m;
+		  document.getElementById("nyc").innerHTML =
+		  (h-6) + ":" + m;
+		  document.getElementById("seattle").innerHTML =
+		  (h-12) + ":" + m;
+		  document.getElementById("london").innerHTML =
+		  (h-1) + ":" + m;
+		  var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		  return i;
+		}
+	</script>
   </body>
+
 </html>
