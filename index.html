@@ -6,90 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
-      	body{
-      		margin:30px auto;
-      		padding:0 20px;
-          max-width: 800px;
-      		font:20px/26px sans-serif;
-          color: #333;
-          letter-spacing: 1px;
-      	}
-      	h1 {
-      	  margin-top: 200px;
-          font-weight: 400;
-          font-size: 6rem;
-          font-family: Georgia, serif;
-      	}
-        span {
-          color: #905cdc;
-        }
-        .contact p {
-          margin-top: 200px;
-          text-align: center;
-          font-size: 16px;
-        }
-        .contact p a {
-          color: #333;
-        }
-        .contact p a:hover {
-          color: #905cdc;
-        }
-		
-		.vreme {
-		display: flex;
-		width: 750px;
-		justify-content: space-between;
+		body{
+			 margin:30px auto;
+			 padding:0 20px;
+			 max-width: 800px;
+			 font:20px/26px Segoe UI, sans-serif;
+			 color: #333;
+			 
+		}
+		 h1 {
+			 margin: 200px 0 100px;
+			 font-weight: 400;
+			 font-size: 6rem;
+			 font-family: Georgia, serif;
+		}
+		 span {
+			 color: #905cdc;
 		}
 		
-		.time {
-			font-size: 16px;
-			line-height: 20px;
+		.contact {
+		margin-top: 200px;
+		
 		}
-        @media (min-width: 550px) and (max-width: 849px)  {
-          h1, p {
-          text-align: center;
-          }
-          h1 {
-            font-size: 4rem;
-            margin-top: 120px;
-          }
-          .contact p {
-            margin-top: 120px;
-          }
-		  
-		  .vreme {
-		width: 100%;
-		justify-content: space-around;
+		 .contact p {
+			 text-align: center;
+			 font-size: 20px;
 		}
-        }
-        @media (max-width:549px) {
-          h1, p {
-          text-align: center;
-          }
-          h1 {
-            font-size: 2rem;
-            margin-top: 100px;
-          }
-          p {
-            font:16px/24px sans-serif;
-          }
-          .contact p {
-            margin-top: 100px;
-          }
-		  
+		 .contact p a {
+			 color: #333;
+		}
+		 .contact p a:hover {
+			 color: #905cdc;
+		}
 		 .vreme {
-			width: 100%;
-			justify-content: space-around;
+			 display: flex;
+			 width: 750px;
+			 justify-content: space-between;
 		}
-        }
+		 .time {
+			 font-size: 16px;
+			 line-height: 20px;
+		}
+		 @media (min-width: 550px) and (max-width: 849px) {
+			 h1, p {
+				 text-align: center;
+			}
+			 h1 {
+				 font-size: 4rem;
+				 margin: 120px 0 100px;
+			}
+			 .vreme {
+				 width: 100%;
+				 justify-content: space-around;
+			}
+		}
+		 @media (max-width:549px) {
+			 h1, p {
+				 text-align: center;
+			}
+			 h1 {
+				 font-size: 2rem;
+				 margin: 100px 0 80px;
+				;
+			}
+			 p {
+				 font:16px/24px sans-serif;
+			}
+			 .vreme {
+				 width: 100%;
+				 justify-content: space-around;
+			}
+		}
+		 @media (max-width:500px) {
+			 .time {
+				 font-size: 14px;
+			}
+			 .contact p {
+				 font-size: 16px;
+			}
+			
+			.contact {
+			margin-top: 100px;
 		
-		@media (max-width:500px) {
-		
-		.time {
-			font-size: 14px;
 		}
 		}
+		 .sve {
+			 min-height: calc(90vh - 70px);
+		}
+		 .footer {
+			 font-size: 12px;
+			 text-align: center;
+			
+		}
 		
+		.icons {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		
+		
+			 @media (max-width:320px) {
+			 .icons {
+			
+			margin-bottom: 20px;
+		}
+		}
+		 
       </style>
   </head>
   	   <script>
@@ -115,7 +137,7 @@
 		}
 	</script>
   <body onload="startTime()">
-  
+	<div class="sve">
 	<div class="vreme">
 		   <div class="time">
 		   Seattle <div id="seattle"></div>
@@ -130,17 +152,30 @@
 		   Belgrade <div id="local"></div>
 		   </div>
 	</div>   
-		   
 	
-  
     <h1>Blueberry Digital</h1>
 	
-		 	
     <p>Fearless team <br>
       creating <span>remarkable</span> things.</p>
-      <div class="contact">
-        <p><a href="https://m.me/BlueberryDigitalRS/">get in touch</a></p>
+	  
+	  
+	  <div class="contact">
+      <p><a href="mailto:digitalblueberry@gmail.com?Subject=Hello%20Jovana">Email us</a></p>
       </div>
+	  
+	  <div class="icons">
+	  <a href="https://www.facebook.com/BlueberryDigitalRS/" target="_blank" rel="noopener"><img src="facebook.svg" height="20" /></a> 
+	  <a href="https://www.linkedin.com/company/blueberry-digital-rs/" target="_blank" rel="noopener"><img src="linkedin.svg" height="20" /></a>
+	  </div>
+
+	</div>
+	
+	<div class="footer">
+	  
+	  All Rights Reserved &copy; Copyright 2019.
+	  
+	</div>
+	  
   </body>
 
 </html>
