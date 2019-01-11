@@ -26,7 +26,7 @@
 		}
 		
 		.contact {
-		margin-top: 200px;
+		margin-top: 150px;
 		
 		}
 		 .contact p {
@@ -114,14 +114,14 @@
 		
 		.icons {
 			text-align: center;
-			margin-bottom: 50px;
+			margin-bottom: 100px;
 		}
 		
 		
 			 @media (max-width:320px) {
 			 .icons {
 			
-			margin-bottom: 20px;
+			margin-bottom: 70px;
 		}
 		}
 		
@@ -131,47 +131,11 @@
 		 
       </style>
   </head>
-  	   <script>
-	   
-		function startTime() {
-		  var today = new Date();
-		  var h = today.getHours();
-		  var m = today.getMinutes();
-		  m = checkTime(m);
-		  document.getElementById("local").innerHTML =
-		  h + ":" + m;
-		  document.getElementById("nyc").innerHTML =
-		  (h-6) + ":" + m;
-		  document.getElementById("seattle").innerHTML =
-		  (h-9) + ":" + m;
-		  document.getElementById("london").innerHTML =
-		  (h-1) + ":" + m;
-		  var t = setTimeout(startTime, 500);
-		}
-		function checkTime(i) {
-		  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-		  return i;
-		}
-	</script>
-  <body onload="startTime()">
-	<div class="sve">
-	<div class="vreme">
-		   <div class="time">
-		   Seattle <div id="seattle"></div>
-		   </div>
-		   <div class="time">
-		   New York <div id="nyc"></div>
-		   </div>
-		   <div class="time">
-		   London <div id="london"></div>
-		   </div>
-		   <div class="time">
-		   Belgrade <div id="local"></div>
-		   </div>
-	</div>   
+  	   
+  <body>
+	
 	
     <h1>Blueberry Digital</h1>
-	
     
 	<div class="tagline">
 	<p>Fearless team <br>
@@ -187,7 +151,7 @@
 	  <a href="https://www.linkedin.com/company/blueberry-digital-rs/" target="_blank" rel="noopener"><img src="linkedin.svg" height="20" /></a>
 	  </div>
 
-	</div>
+	
 	
 	<div class="footer">
 	  
